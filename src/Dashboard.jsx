@@ -22,7 +22,7 @@ export default function Dashboard({ token, user, setUser }) {
   }, []);
 
   useEffect(() => {
-    const ws = new WebSocket('ws:///pex-backend-vtex.onrender.com', [token]);
+    const ws = new WebSocket('wss://pex-backend-vtex.onrender.com', [token]);
 
     ws.onopen = () => console.log('WebSocket Connected');
 
